@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints
+
+# C#
+## Ignorar archivos de compilación
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.suo
+*.user
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+_ReSharper*/
+*.csproj.user
+
+# PHP
+## Dependencias de Composer
+/vendor/
+composer.lock
+
+## Entornos
+.env
+.env.local
+.env.test
+.env.production
+
+## Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+## Sistema
+.DS_Store
+Thumbs.db
+
+# IDE y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de configuración local
+*.local.*
+config/local.php

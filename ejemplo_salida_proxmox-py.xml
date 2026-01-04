@@ -1,0 +1,210 @@
+# Agente: Proxmox_Ceph_Monitor
+# Versión: 1.1
+# Fecha: 2025-12-26 12:45:15
+
+<module>
+<name><![CDATA[Nombre_Nodo]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Nombre del nodo Proxmox</description>
+<data><![CDATA[Desconocido]]></data>
+<module_group><![CDATA[Proxmox Nodo]]></module_group>
+</module>
+<module>
+<name><![CDATA[Estado_Nodo]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del nodo Proxmox</description>
+<data><![CDATA[offline]]></data>
+<module_group><![CDATA[Proxmox Nodo]]></module_group>
+<str_warning><![CDATA[!online]]></str_warning>
+<str_critical><![CDATA[!online]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Memoria_Proxmox_Porcentaje]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Porcentaje de memoria usado por Proxmox</description>
+<data><![CDATA[18.02]]></data>
+<module_group><![CDATA[Proxmox Nodo]]></module_group>
+<max_warning>85</max_warning>
+<max_critical>95</max_critical>
+</module>
+<module>
+<name><![CDATA[VMs_Nodo_Total]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero total de VMs en este nodo</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox VMs Nodo]]></module_group>
+</module>
+<module>
+<name><![CDATA[VMs_Nodo_Running]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de VMs ejecutandose en este nodo</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox VMs Nodo]]></module_group>
+</module>
+<module>
+<name><![CDATA[VMs_Nodo_Stopped]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de VMs paradas en este nodo</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox VMs Nodo]]></module_group>
+</module>
+<module>
+<name><![CDATA[Contenedores_Nodo_Total]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero total de contenedores en este nodo</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox Contenedores Nodo]]></module_group>
+</module>
+<module>
+<name><![CDATA[Contenedores_Nodo_Running]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de contenedores ejecutandose en este nodo</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox Contenedores Nodo]]></module_group>
+</module>
+<module>
+<name><![CDATA[Contenedores_Nodo_Stopped]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de contenedores parados en este nodo</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox Contenedores Nodo]]></module_group>
+</module>
+<module>
+<name><![CDATA[Cluster_ConQuorum]]></name>
+<type><![CDATA[generic_proc]]></type>
+<description>Estado del quorum del cluster (1=Con quorum, 0=Sin quorum)</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox Cluster]]></module_group>
+</module>
+<module>
+<name><![CDATA[Nodos_Cluster_Total]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero total de nodos en el cluster</description>
+<data><![CDATA[3]]></data>
+<module_group><![CDATA[Proxmox Cluster]]></module_group>
+</module>
+<module>
+<name><![CDATA[Nodos_Cluster_Online]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de nodos online en el cluster</description>
+<data><![CDATA[3]]></data>
+<module_group><![CDATA[Proxmox Cluster]]></module_group>
+</module>
+<module>
+<name><![CDATA[Nodos_Cluster_Offline]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de nodos offline en el cluster</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Proxmox Cluster]]></module_group>
+<max_warning>0</max_warning>
+<max_critical>1</max_critical>
+</module>
+<module>
+<name><![CDATA[Servicio_pve-cluster]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del servicio pve-cluster</description>
+<data><![CDATA[active]]></data>
+<module_group><![CDATA[Proxmox Servicios]]></module_group>
+<str_warning><![CDATA[!active]]></str_warning>
+<str_critical><![CDATA[!active]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Servicio_pvedaemon]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del servicio pvedaemon</description>
+<data><![CDATA[active]]></data>
+<module_group><![CDATA[Proxmox Servicios]]></module_group>
+<str_warning><![CDATA[!active]]></str_warning>
+<str_critical><![CDATA[!active]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Servicio_pveproxy]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del servicio pveproxy</description>
+<data><![CDATA[active]]></data>
+<module_group><![CDATA[Proxmox Servicios]]></module_group>
+<str_warning><![CDATA[!active]]></str_warning>
+<str_critical><![CDATA[!active]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Servicio_pvestatd]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del servicio pvestatd</description>
+<data><![CDATA[active]]></data>
+<module_group><![CDATA[Proxmox Servicios]]></module_group>
+<str_warning><![CDATA[!active]]></str_warning>
+<str_critical><![CDATA[!active]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Ceph_Estado]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado de servicio Ceph</description>
+<data><![CDATA[HEALTH_WARN]]></data>
+<module_group><![CDATA[Ceph]]></module_group>
+<str_warning><![CDATA[HEALTH_WARN]]></str_warning>
+<str_critical><![CDATA[HEALTH_ERR]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Ceph_OSD_Total]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero total de OSD en Ceph</description>
+<data><![CDATA[12]]></data>
+<module_group><![CDATA[Ceph OSD]]></module_group>
+</module>
+<module>
+<name><![CDATA[Ceph_OSD_Up]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de OSD activos en Ceph</description>
+<data><![CDATA[12]]></data>
+<module_group><![CDATA[Ceph OSD]]></module_group>
+</module>
+<module>
+<name><![CDATA[Ceph_OSD_Down]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de OSD inactivos en Ceph</description>
+<data><![CDATA[0]]></data>
+<module_group><![CDATA[Ceph OSD]]></module_group>
+<max_warning>0</max_warning>
+<max_critical>0</max_critical>
+</module>
+<module>
+<name><![CDATA[Ceph_Pools_Total]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero total de pools en Ceph</description>
+<data><![CDATA[4]]></data>
+<module_group><![CDATA[Ceph Pools]]></module_group>
+</module>
+<module>
+<name><![CDATA[CephFS_Total]]></name>
+<type><![CDATA[generic_data]]></type>
+<description>Numero de sistemas CephFS</description>
+<data><![CDATA[1]]></data>
+<module_group><![CDATA[CephFS]]></module_group>
+</module>
+<module>
+<name><![CDATA[Servicio_ceph-mon]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del servicio ceph-mon de Ceph</description>
+<data><![CDATA[active]]></data>
+<module_group><![CDATA[Ceph Servicios]]></module_group>
+<str_warning><![CDATA[!active]]></str_warning>
+<str_critical><![CDATA[!active]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Servicio_ceph-mgr]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del servicio ceph-mgr de Ceph</description>
+<data><![CDATA[active]]></data>
+<module_group><![CDATA[Ceph Servicios]]></module_group>
+<str_warning><![CDATA[!active]]></str_warning>
+<str_critical><![CDATA[!active]]></str_critical>
+</module>
+<module>
+<name><![CDATA[Servicio_ceph-osd]]></name>
+<type><![CDATA[generic_data_string]]></type>
+<description>Estado del servicio ceph-osd de Ceph</description>
+<data><![CDATA[active]]></data>
+<module_group><![CDATA[Ceph Servicios]]></module_group>
+<str_warning><![CDATA[!active]]></str_warning>
+<str_critical><![CDATA[!active]]></str_critical>
+</module>
